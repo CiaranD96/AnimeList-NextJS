@@ -1,0 +1,26 @@
+.card {
+  background-color: $bg-secondary;
+  border-radius: $border-radius-5;
+  box-shadow: $shadow-dark-grey;
+  color: $text-primary;
+  position: relative;
+  text-decoration: none;
+  height: 700px;
+  width: 300px;
+  &:hover {
+    background-color: $hover-primary;
+  }
+
+  .card-image {
+    border-top-left-radius: $border-radius-5;
+    border-top-right-radius: $border-radius-5;
+  }
+
+  .card-body {
+    padding: 0.5rem 0.5rem;
+
+    .card-title {
+      margin: 0;
+    }
+  }
+}

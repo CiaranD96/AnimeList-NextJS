@@ -1,0 +1,11 @@
+.page-selection-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+
+  .page-selection-button {
+    height: 3rem;
+    width: 9rem;
+    margin: 0 1rem;
+  }
+}
