@@ -1,0 +1,27 @@
+.season-selection-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  background-color: $bg-secondary;
+  border-radius: $border-radius-10;
+
+  .select-group {
+    display: flex;
+    align-items: baseline;
+    margin: 0 0.5rem;
+
+    .season-select {
+      border: 0;
+      margin-left: 0.5rem;
+      font-size: 2rem;
+      color: $hover-primary;
+      background-color: transparent;
+      border-bottom: 1px solid $hover-primary;
+    }
+  }
+}

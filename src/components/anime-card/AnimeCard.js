@@ -16,7 +16,7 @@ export default function AnimeCard({ show }) {
       />
       <div className='card-body'>
         <h3 className='card-title'>
-          {show.title} ({show.year})
+          {show.title} {show.year && `(${show.year})`}
         </h3>
         <p>Studio: {show.studios.map((studio) => studio.name)}</p>
         <div className='card-genres'>
@@ -25,7 +25,7 @@ export default function AnimeCard({ show }) {
             <br />
           </span>
           {show.genres.map((genre) => (
-            <span>{genre.name}&nbsp;</span>
+            <span key={genre.name}>{genre.name}&nbsp;</span>
           ))}
         </div>
         <p>

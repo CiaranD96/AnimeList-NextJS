@@ -18,6 +18,11 @@ export default function Header() {
               Top Anime
             </Link>
           </li>
+          <li className='nav-item'>
+            <Link href='/anime/seasonal-anime' className='nav-link'>
+              Seasonal Anime
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

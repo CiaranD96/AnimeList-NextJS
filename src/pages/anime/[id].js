@@ -54,7 +54,8 @@ export default function SingleShowPage({ show }) {
                   : `Score: N/A`}
               </p>
               <p>
-                Aired: {dateFrom} - {dateTo}
+                Aired: {dateFrom}
+                {dateTo !== 'Invalid Date' && ` -${dateTo}`}
               </p>
               <p>
                 Type: {showData.type}
