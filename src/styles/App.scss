@@ -12,6 +12,8 @@
 @import '../components/tabs/characters/character-card.scss';
 @import '../components/tabs/episodes/episodes-tab.scss';
 @import '../components/tabs/episodes/episode-card.scss';
+@import '../components/tabs/reviews/review-card.scss';
+@import '../components/tabs/reviews/review-tab.scss';
 
 // pages imports
 @import '../pages/anime/top-anime.scss';
@@ -73,4 +75,24 @@ body {
   align-items: center;
   position: absolute;
   padding: 0.5rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $hover-primary;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $text-primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

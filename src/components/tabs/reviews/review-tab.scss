@@ -1,0 +1,11 @@
+.review-tab {
+  padding: 1rem;
+
+  .review-tab-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+}
