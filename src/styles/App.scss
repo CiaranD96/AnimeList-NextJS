@@ -5,7 +5,11 @@
 @import '../components/anime-card/anime-card.scss';
 @import '../components/pagination/pagination.scss';
 @import '../components/search-bar/search-bar.module.scss';
+
+// tabs imports
 @import '../components/tabs/about/about-tab.scss';
+@import '../components/tabs/characters/characters-tab.scss';
+@import '../components/tabs/characters/character-card.scss';
 
 // pages imports
 @import '../pages/anime/top-anime.scss';

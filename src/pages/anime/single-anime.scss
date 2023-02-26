@@ -13,6 +13,7 @@
     .show-card {
       background-color: $bg-secondary;
       border-radius: $border-radius-10;
+      height: fit-content;
       width: 400px;
 
       .show-image {
@@ -24,6 +25,7 @@
         padding: 0.5rem;
 
         h3 {
+          color: $hover-primary;
           margin: 0;
         }
       }

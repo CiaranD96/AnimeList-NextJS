@@ -69,7 +69,7 @@ export default function SeasonalAnimePage() {
           <select
             name='season'
             id='season'
-            value={getCurrentSeason()}
+            value={season}
             onChange={(e) => setSeason(e.target.value)}
             className='season-select'
           >
@@ -102,10 +102,13 @@ export default function SeasonalAnimePage() {
       </div>
 
       <div className='top-anime-grid'>
-        {results &&
+        {results && results.data.length > 0 ? (
           results.data.map((show) => (
             <AnimeCard key={show.mal_id} show={show} />
-          ))}
+          ))
+        ) : (
+          <h2>Oops, it looks there are no shows for this season and year!</h2>
+        )}
       </div>
 
       {results && (

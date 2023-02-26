@@ -5,15 +5,13 @@ import dayjs from 'dayjs';
 
 import Layout from '@/components/layout/layout/Layout';
 import AboutTab from '@/components/tabs/about/about-tab';
+import CharactersTab from '@/components/tabs/characters/CharactersTab';
 
-export default function SingleShowPage({ show }) {
+export default function SingleShowPage({ show, characters }) {
   const showData = show.data;
-
   const dateFrom = dayjs(showData.aired.from).format('DD/MM/YYYY');
   const dateTo = dayjs(showData.aired.to).format('DD/MM/YYYY');
 
-  console.log(dateFrom, dateTo);
-  console.log(showData);
   return (
     <Layout title={`AnimeList: ${showData.title}`}>
       <div className='show-container'>
@@ -83,7 +81,7 @@ export default function SingleShowPage({ show }) {
                 />
               </TabPanel>
               <TabPanel>
-                <h1>Characters</h1>
+                <CharactersTab characters={characters} />
               </TabPanel>
               <TabPanel>
                 <h1>Episodes</h1>
@@ -100,12 +98,18 @@ export default function SingleShowPage({ show }) {
 }
 
 export async function getServerSideProps({ query: { id } }) {
-  const res = await fetch(`https://api.jikan.moe/v4/anime/${id}/full`);
-  const show = await res.json();
+  const showRes = await fetch(`https://api.jikan.moe/v4/anime/${id}/full`);
+  const show = await showRes.json();
+
+  const charactersRes = await fetch(
+    `https://api.jikan.moe/v4/anime/${id}/characters`
+  );
+  const characters = await charactersRes.json();
 
   return {
     props: {
       show,
+      characters,
     },
   };
 }

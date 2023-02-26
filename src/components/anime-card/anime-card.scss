@@ -9,6 +9,10 @@
   width: 300px;
   &:hover {
     background-color: $hover-primary;
+
+    .card-title {
+      color: $text-primary !important;
+    }
   }
 
   .card-image {
@@ -20,6 +24,7 @@
     padding: 0.5rem 0.5rem;
 
     .card-title {
+      color: $hover-primary;
       margin: 0;
     }
   }
