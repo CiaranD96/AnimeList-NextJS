@@ -17,7 +17,7 @@ export default function CharacterCard({ character }) {
           <p>Voice actors:</p>
           {character.voice_actors &&
             character.voice_actors.map((actor) => (
-              <p>
+              <p key={actor.person.name}>
                 {actor.person.name} ({actor.language})
               </p>
             ))}

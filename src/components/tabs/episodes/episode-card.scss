@@ -1,0 +1,12 @@
+.episode-card {
+  background-color: $bg-body;
+  border-radius: $border-radius-10;
+  padding: 1rem 1.5rem;
+  width: 30%;
+  box-shadow: $shadow-dark-grey;
+
+  h3 {
+    color: $hover-primary;
+    margin: 0;
+  }
+}

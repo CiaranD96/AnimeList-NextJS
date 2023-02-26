@@ -1,4 +1,8 @@
-export default function Pagination({ pagination, handlePageButton }) {
+export default function Pagination({
+  pagination,
+  handlePageButton,
+  currentPage,
+}) {
   return (
     <div className='page-selection-container'>
       <button
@@ -10,7 +14,8 @@ export default function Pagination({ pagination, handlePageButton }) {
         Previous Page
       </button>
       <p>
-        Page: {pagination.current_page} - {pagination.last_visible_page}
+        Page: {pagination.current_page ? pagination.currentPage : currentPage} -{' '}
+        {pagination.last_visible_page}
       </p>
       <button
         className='btn page-selection-button next-button'

@@ -6,8 +6,9 @@ import dayjs from 'dayjs';
 import Layout from '@/components/layout/layout/Layout';
 import AboutTab from '@/components/tabs/about/about-tab';
 import CharactersTab from '@/components/tabs/characters/CharactersTab';
+import EpisodesTab from '@/components/tabs/episodes/EpisodesTab';
 
-export default function SingleShowPage({ show, characters }) {
+export default function SingleShowPage({ show, characters, episodes }) {
   const showData = show.data;
   const dateFrom = dayjs(showData.aired.from).format('DD/MM/YYYY');
   const dateTo = dayjs(showData.aired.to).format('DD/MM/YYYY');
@@ -84,7 +85,7 @@ export default function SingleShowPage({ show, characters }) {
                 <CharactersTab characters={characters} />
               </TabPanel>
               <TabPanel>
-                <h1>Episodes</h1>
+                <EpisodesTab episodes={episodes} />
               </TabPanel>
               <TabPanel>
                 <h1>Reviews</h1>
