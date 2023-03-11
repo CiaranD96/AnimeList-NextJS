@@ -14,8 +14,8 @@ export default function Pagination({
         Previous Page
       </button>
       <p>
-        Page: {pagination.current_page ? pagination.currentPage : currentPage} -{' '}
-        {pagination.last_visible_page}
+        Page: {pagination.current_page ? pagination.current_page : currentPage}{' '}
+        - {pagination.last_visible_page}
       </p>
       <button
         className='btn page-selection-button next-button'

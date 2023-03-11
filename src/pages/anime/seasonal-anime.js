@@ -6,8 +6,11 @@ import Pagination from '@/components/pagination/Pagination';
 
 export default function SeasonalAnimePage() {
   // get current season based on what month it is
-  const getCurrentSeason = () => {
-    const month = new Date().getMonth() + 1;
+  function getCurrentSeason() {
+    // It's plus one because January is index 0
+    const now = new Date();
+    const month = now.getMonth() + 1;
+
     if (month > 3 && month < 6) {
       return 'spring';
     }
@@ -23,7 +26,26 @@ export default function SeasonalAnimePage() {
     if (month >= 1 && month < 3) {
       return 'winter';
     }
-  };
+
+    const day = now.getDate();
+    if (month === 3) {
+      return day < 22 ? 'winter' : 'spring';
+    }
+
+    if (month === 6) {
+      return day < 22 ? 'spring' : 'summer';
+    }
+
+    if (month === 9) {
+      return day < 22 ? 'summer' : 'fall';
+    }
+
+    if (month === 12) {
+      return day < 22 ? 'fall' : 'winter';
+    }
+
+    console.error('Unable to calculate current season');
+  }
 
   const [year, setYear] = useState(new Date().getFullYear());
   const [season, setSeason] = useState(getCurrentSeason());
